@@ -48,14 +48,14 @@ El proyecto sigue una arquitectura modular separando la lógica (`src`) de la vi
     * Simula una "IA GEnerativa y Explicable" (Mock) que traduce los resultados técnicos a lenguaje natural.
     * Estructura de la carpeta contenedora del proyecto:
     * │
-      ├── data/                   # Carpeta opcional para CSV local (si falla la descarga ONLINE)
-      ├── src/                    # LÓGICA DEL NEGOCIO (Backend)
-      │   ├── __init__.py         # Archivo vacío para definir paquete e inicializarlo
-      │   └── logic.py            # Clase BiasExplorerModel (Carga, Limpieza, ML)
-      │
-      ├── app.py                  # INTERFAZ DE USUARIO (Frontend - Streamlit)
-      ├── requirements.txt        # Dependencias del proyecto
-      └── README.md               # Esta guía didáctica
+    * ├── data/                   # Carpeta opcional para CSV local (si falla la descarga ONLINE)
+    * ├── src/                    # LÓGICA DEL NEGOCIO (Backend)
+    * │   ├── __init__.py         # Archivo vacío para definir paquete e inicializarlo
+    * │   └── logic.py            # Clase BiasExplorerModel (Carga, Limpieza, ML)
+    * │
+    * ├── app.py                  # INTERFAZ DE USUARIO (Frontend - Streamlit)
+    * ├── requirements.txt        # Dependencias del proyecto
+    * └── README.md               # Esta guía didáctica
       
     * **Nota:** Para ejecutar la mini app:
     * 1. Se debe instalar las dependencias requeridas en el fichero requirements.txt // **pip install -r requirements.txt**
