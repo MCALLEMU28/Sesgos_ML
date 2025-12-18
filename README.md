@@ -104,7 +104,7 @@ Esta herramienta está pensada para una sesión de taller guiado para trabajarlo
 
 ---
 
-## ⚠️ 4. Qué puede salir mal y cómo solucionarlo
+## ⚠️ 4. ¿Qué puede salir mal y cómo solucionarlo?
 
 ### 🔴 Error: `ModuleNotFoundError: No module named 'src'`
 * **Causa:** Python no encuentra la carpeta de lógica.
