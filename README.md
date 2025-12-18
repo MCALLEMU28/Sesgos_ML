@@ -18,23 +18,50 @@ El proyecto sigue una arquitectura modular separando la lógica (`src`) de la vi
     * Descarga el dataset desde el repositorio UCI.
     * Convierte la variable objetivo a binaria (0: <=50K, 1: >50K).
     * Limpia valores nulos y espacios en blanco (Eliminando el ruido del dataset) .
+      <img width="1690" height="751" alt="image" src="https://github.com/user-attachments/assets/7df6a760-94f3-4638-89a2-da94c6bfd67e" />
+
+
 
 2.  **Preprocesamiento y Pipeline:**
     * Divide los datos en entrenamiento y prueba (`train_test_split`) con una semilla fija (`42`) para que todos los usuarios, en este caso los estudiantes obtengan el mismo resultado.
     * Aplica **OneHotEncoding** a variables categóricas (como 'job', 'marital-status') y **StandardScaler** a numéricas.
+      <img width="1516" height="279" alt="image" src="https://github.com/user-attachments/assets/89a3511c-f14f-4983-a020-f18ada6148a3" />
+
 
 3.  **Entrenamiento:**
     * Entrena dos modelos contrastantes: **Regresión Logística** (lineal/interpretable) y **Random Forest** (no lineal/complejo).
+      <img width="1684" height="539" alt="image" src="https://github.com/user-attachments/assets/82800330-483e-4d44-ac32-277ed2805282" />
 
 4.  **Evaluación y Auditoría:**
     * Calcula métricas estándar (Accuracy, F1).
     * **Paso Crítico:** Desglosa el *Recall* por género para medir la equidad.
     * Genera curvas ROC y Matrices de Confusión.
+      <img width="1786" height="934" alt="image" src="https://github.com/user-attachments/assets/aa6c3d47-b3f3-48a1-b8ef-70ee31368c6a" />
+      <img width="908" height="746" alt="image" src="https://github.com/user-attachments/assets/90c3028e-fe3d-4d3e-939d-f90190baf101" />
+      <img width="1744" height="459" alt="image" src="https://github.com/user-attachments/assets/b12119cb-4e2c-4c03-adf0-7d75872a0b7b" />
+      <img width="1710" height="510" alt="image" src="https://github.com/user-attachments/assets/d5986793-61b8-4932-a2b4-ae12b3047eec" />
+
+
 
 5.  **Interfaz (`app.py`):**
     * Visualiza todo lo anterior usando **Streamlit**.
     * Simula una "IA GEnerativa y Explicable" (Mock) que traduce los resultados técnicos a lenguaje natural.
-
+    * Estructura de la carpeta contenedora del proyecto:
+    * │
+      ├── data/                   # Carpeta opcional para CSV local (si falla la descarga ONLINE)
+      ├── src/                    # LÓGICA DEL NEGOCIO (Backend)
+      │   ├── __init__.py         # Archivo vacío para definir paquete e inicializarlo
+      │   └── logic.py            # Clase BiasExplorerModel (Carga, Limpieza, ML)
+      │
+      ├── app.py                  # INTERFAZ DE USUARIO (Frontend - Streamlit)
+      ├── requirements.txt        # Dependencias del proyecto
+      └── README.md               # Esta guía didáctica
+      
+    * **Nota:** Para ejecutar la mini app:
+    * 1. Se debe instalar las dependencias requeridas en el fichero requirements.txt // **pip install -r requirements.txt**
+    * 2. Crear desde la raíz del directorio en el cual están los ficheros un entorno virtual: **python3 -m venv venv | source venv/bin/activate**
+    * 3. Ejecutar el mini aplicativo mediante el siguiente comando: **streamlit run app.py**
+   
 ---
 
 ## 🎓 2. Objetivos de Aprendizaje
