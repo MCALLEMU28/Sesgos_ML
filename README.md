@@ -47,6 +47,7 @@ El proyecto sigue una arquitectura modular separando la lógica (`src`) de la vi
     * Visualiza todo lo anterior usando **Streamlit**.
     * Simula una "IA GEnerativa y Explicable" (Mock) que traduce los resultados técnicos a lenguaje natural.
     * Estructura de la carpeta contenedora del proyecto:
+    * **Sesgos_ML**
     * │
     * ├── data/                   # Carpeta opcional para CSV local (si falla la descarga ONLINE)
     * ├── src/                    # LÓGICA DEL NEGOCIO (Backend)
